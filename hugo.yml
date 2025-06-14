@@ -31,10 +31,10 @@ params:                          # Free-form parameters accessible via .Site.Par
   author: Periphery              # Default author name for posts, used by theme templates
   images: ["<link or path of image for opengraph, twitter-cards>"]  # Default social preview images
   DateFormat: "January 2, 2006"  # Global date formatting string for use in templates
-  defaultTheme: auto             # PaperMod option: auto, dark, or light
+  defaultTheme: dark             # PaperMod option: auto, dark, or light
   disableThemeToggle: false      # PaperMod option: hide the light/dark switch
   ShowReadingTime: true          # PaperMod: show estimated reading time
-  ShowShareButtons: true         # PaperMod: display social share icons
+  ShowShareButtons: false         # PaperMod: display social share icons
   ShowPostNavLinks: true         # PaperMod: show Prev/Next post links
   ShowBreadCrumbs: true          # PaperMod: show breadcrumb trail
   ShowCodeCopyButtons: true      # PaperMod: show “Copy” buttons on code blocks
@@ -92,7 +92,7 @@ params:                          # Free-form parameters accessible via .Site.Par
 
   cover:                         # PaperMod: cover image display rules
     hidden: false                # Hide cover on all pages
-    hiddenInList: false          # Hide cover on list pages
+    hiddenInList: true           # Hide cover on list pages
     hiddenInSingle: false        # Hide cover on single post pages
 
   #editPost:                      # PaperMod: “Edit this post” link settings
