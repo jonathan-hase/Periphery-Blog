@@ -43,7 +43,7 @@ params:                          # Free-form parameters accessible via .Site.Par
   UseHugoToc: true               # PaperMod: use Hugo’s built-in TOC
   disableSpecial1stPost: false   # PaperMod: disable featured styling for first post
   disableScrollToTop: false      # PaperMod: disable “Scroll to Top” button
-  comments: false                # PaperMod: enable/disable comments section
+  comments: true                # PaperMod: enable/disable comments section
   hidemeta: false                # PaperMod: hide metadata (date, author) on posts
   hideSummary: false             # PaperMod: hide summary blurbs on list pages
   showtoc: true                 # PaperMod: show TOC by default
