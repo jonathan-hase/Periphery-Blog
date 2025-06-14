@@ -122,9 +122,9 @@ outputs:
 # ── Site Menu ────────────────────────────────────────────────────────────────
 menu:                            # Define site-wide menus accessible via .Site.Menus
   main:                          # Main navigation menu identifier
-    - identifier: all posts          # Internal menu key
+    - identifier: archive          # Internal menu key
       name: all posts                # Text label in the menu
-      url: /archive/               # URL path for the menu link
+      url: /archives/               # URL path for the menu link
       weight: 10                 # Order of the item (lower first)
     - identifier: search         # Unique key for the menu item
       name: search               # Text displayed in the nav bar
