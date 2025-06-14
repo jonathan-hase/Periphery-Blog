@@ -33,14 +33,11 @@ params:                          # Free-form parameters accessible via .Site.Par
   DateFormat: "January 2, 2006"  # Global date formatting string for use in templates
   defaultTheme: auto             # PaperMod option: auto, dark, or light
   disableThemeToggle: false      # PaperMod option: hide the light/dark switch
-  label:
-    text: "periphery"     # ← Your custom sidebar title
-
   ShowReadingTime: true          # PaperMod: show estimated reading time
   ShowShareButtons: true         # PaperMod: display social share icons
   ShowPostNavLinks: true         # PaperMod: show Prev/Next post links
   ShowBreadCrumbs: true          # PaperMod: show breadcrumb trail
-  ShowCodeCopyButtons: false     # PaperMod: show “Copy” buttons on code blocks
+  ShowCodeCopyButtons: true      # PaperMod: show “Copy” buttons on code blocks
   ShowWordCount: true            # PaperMod: display word count on posts
   ShowRssButtonInSectionTermList: true  # PaperMod: show RSS icon in lists
   UseHugoToc: true               # PaperMod: use Hugo’s built-in TOC
@@ -49,20 +46,20 @@ params:                          # Free-form parameters accessible via .Site.Par
   comments: false                # PaperMod: enable/disable comments section
   hidemeta: false                # PaperMod: hide metadata (date, author) on posts
   hideSummary: false             # PaperMod: hide summary blurbs on list pages
-  showtoc: false                 # PaperMod: show TOC by default
-  tocopen: false                 # PaperMod: keep TOC expanded
+  showtoc: true                 # PaperMod: show TOC by default
+  tocopen: true                 # PaperMod: keep TOC expanded
 
-  assets:                        # PaperMod: asset-pipeline configuration
-    favicon: "<link / abs url>"  # Path or URL to favicon
-    favicon16x16: "<link / abs url>"  # 16×16 icon for older browsers
-    favicon32x32: "<link / abs url>"  # 32×32 icon
-    apple_touch_icon: "<link / abs url>"  # iOS Home-screen icon
-    safari_pinned_tab: "<link / abs url>"  # Safari pinned tab icon
+  #assets:                        # PaperMod: asset-pipeline configuration
+    #favicon: "<link / abs url>"  # Path or URL to favicon
+    #favicon16x16: "<link / abs url>"  # 16×16 icon for older browsers
+    #favicon32x32: "<link / abs url>"  # 32×32 icon
+    #apple_touch_icon: "<link / abs url>"  # iOS Home-screen icon
+    #safari_pinned_tab: "<link / abs url>"  # Safari pinned tab icon
 
   label:                         # PaperMod: label on home page header
-    text: "Home"                 # Text of the label
-    icon: /apple-touch-icon.png  # Path to icon image
-    iconHeight: 35               # CSS height for the icon
+    text: "periphery"            # Text of the label
+    #icon: /apple-touch-icon.png  # Path to icon image
+    #iconHeight: 35               # CSS height for the icon
 
   profileMode:                   # PaperMod: enable site “profile” mode
     enabled: false               # Turn on/off profile mode explicitly
@@ -94,14 +91,14 @@ params:                          # Free-form parameters accessible via .Site.Par
       #SiteVerificationTag: "XYZabc"
 
   cover:                         # PaperMod: cover image display rules
-    hidden: true                 # Hide cover on all pages
-    hiddenInList: true           # Hide cover on list pages
-    hiddenInSingle: true         # Hide cover on single post pages
+    hidden: false                # Hide cover on all pages
+    hiddenInList: false          # Hide cover on list pages
+    hiddenInSingle: false        # Hide cover on single post pages
 
-  editPost:                      # PaperMod: “Edit this post” link settings
-    URL: "https://github.com/<path_to_repo>/content"  # Base URL for editing via GitHub
-    Text: "Suggest Changes"      # Anchor text for edit link
-    appendFilePath: true         # Append the actual file path to the link
+  #editPost:                      # PaperMod: “Edit this post” link settings
+    #URL: "https://github.com/<path_to_repo>/content"  # Base URL for editing via GitHub
+    #Text: "Suggest Changes"      # Anchor text for edit link
+    #appendFilePath: true         # Append the actual file path to the link
 
   fuseOpts:                      # Fuse.js search options for client-side search
     isCaseSensitive: false       # Search case sensitivity
