@@ -77,7 +77,7 @@ params:                          # Free-form parameters accessible via .Site.Par
         url: search                # Linking to /tags/
 
   homeInfoParams:                # PaperMod: small welcome block on home
-    Content: We are interested in game dev, tools and workflows. We are working on our first game working-titled "War Video Report".  # Body text under greeting
+    Content: Small indie game studio working on our first game working-titled "War Video Report".  # Body text under greeting
 
   socialIcons:                   # PaperMod: social media icons >> list https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
     - name: bluesky                    # Icon name (x.com)
