@@ -63,7 +63,7 @@ params:                          # Free-form parameters accessible via .Site.Par
     iconHeight: 35               # CSS height for the icon
 
   profileMode:                   # PaperMod: enable site “profile” mode
-    enabled: true               # Turn on/off profile mode explicitly
+    enabled: false               # Turn on/off profile mode explicitly
     title: periphery           # Profile page main title
     subtitle: "This is subtitle" # Profile page subtitle
     #imageUrl: "<img location>"   # Profile avatar image path/URL
@@ -71,9 +71,9 @@ params:                          # Free-form parameters accessible via .Site.Par
     #imageHeight: 120             # Avatar display height
     #imageTitle: my image         # Alt/title text for avatar
     buttons:                     # Custom buttons under profile
-      - name: All Posts              # Button label
+      - name: all posts              # Button label
         url: archives               # URL or section for this button
-      - name: Search               # Second button label
+      - name: search               # Second button label
         url: search                # Linking to /tags/
 
   homeInfoParams:                # PaperMod: small welcome block on home
