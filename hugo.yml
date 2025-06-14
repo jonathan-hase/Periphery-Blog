@@ -31,7 +31,7 @@ params:                          # Free-form parameters accessible via .Site.Par
   author: Periphery              # Default author name for posts, used by theme templates
   images: ["<link or path of image for opengraph, twitter-cards>"]  # Default social preview images
   DateFormat: "January 2, 2006"  # Global date formatting string for use in templates
-  defaultTheme: dark             # PaperMod option: auto, dark, or light
+  defaultTheme: auto             # PaperMod option: auto, dark, or light
   disableThemeToggle: false      # PaperMod option: hide the light/dark switch
   ShowReadingTime: true          # PaperMod: show estimated reading time
   ShowShareButtons: false         # PaperMod: display social share icons
