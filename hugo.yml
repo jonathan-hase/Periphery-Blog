@@ -1,161 +1,163 @@
-baseURL: "jonathan-hase.github.io"
-title: Periphery Blog
-paginate: 5
-theme: PaperMod
+# ── Site URL ───────────────────────────────────────────────────────────────
+baseURL: "https://jonathan-hase.github.io/Periphery-Blog/"   # The full, absolute URL of your published site, including protocol and trailing slash
 
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
+# ── Site Identity ──────────────────────────────────────────────────────────
+title: Periphery Blog            # The human-readable title of your site, exposed as .Site.Title
+theme: PaperMod                  # The name of the theme directory under themes/, or the Hugo Module path
 
-minify:
-  disableXML: true
-  minifyOutput: true
+# ── Pagination (Hugo v0.128+) ──────────────────────────────────────────────
+pagination:                      # Replaces the deprecated `paginate` key
+  pagerSize: 5                   # Number of posts per page in paginated lists
 
-params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Periphery Blog
-  description: "Blog of Periphery"
-  keywords: [Blog, Periphery, Indie Games Dev]
-  author: Periphery
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+# ── Robots.txt Generation ───────────────────────────────────────────────────
+enableRobotsTXT: true            # Auto-generate a /robots.txt file for crawlers
 
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
+# ── Content Build Controls ──────────────────────────────────────────────────
+buildDrafts: false               # Include draft (draft = true) pages when building the site
+buildFuture: false               # Include content with a future publish date
+buildExpired: false              # Include content that has passed an expiry date
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+# ── Minification Settings ──────────────────────────────────────────────────
+minify:                          # Hugo Pipes minification options
+  disableXML: true               # Disable minification of XML files (e.g. RSS/ATOM)
+  minifyOutput: true             # Globally enable minification of HTML, CSS, JS, etc.
 
-  label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+# ── Custom Parameters ──────────────────────────────────────────────────────
+params:                          # Free-form parameters accessible via .Site.Params
+  env: production                # Custom flag your templates/theme can use (e.g., enable analytics in prod)
+  title: Periphery Blog          # Theme-specific subtitle/title override under .Site.Params.title
+  description: "Blog of Periphery"  # Meta description for SEO and social sharing
+  keywords: [Blog, Periphery, Indie Games Dev]  # SEO keywords exposed via theme’s meta tags
+  author: Periphery              # Default author name for posts, used by theme templates
+  images: ["<link or path of image for opengraph, twitter-cards>"]  # Default social preview images
+  DateFormat: "January 2, 2006"  # Global date formatting string for use in templates
+  defaultTheme: auto             # PaperMod option: auto, dark, or light
+  disableThemeToggle: false      # PaperMod option: hide the light/dark switch
 
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
+  ShowReadingTime: true          # PaperMod: show estimated reading time
+  ShowShareButtons: true         # PaperMod: display social share icons
+  ShowPostNavLinks: true         # PaperMod: show Prev/Next post links
+  ShowBreadCrumbs: true          # PaperMod: show breadcrumb trail
+  ShowCodeCopyButtons: false     # PaperMod: show “Copy” buttons on code blocks
+  ShowWordCount: true            # PaperMod: display word count on posts
+  ShowRssButtonInSectionTermList: true  # PaperMod: show RSS icon in lists
+  UseHugoToc: true               # PaperMod: use Hugo’s built-in TOC
+  disableSpecial1stPost: false   # PaperMod: disable featured styling for first post
+  disableScrollToTop: false      # PaperMod: disable “Scroll to Top” button
+  comments: false                # PaperMod: enable/disable comments section
+  hidemeta: false                # PaperMod: hide metadata (date, author) on posts
+  hideSummary: false             # PaperMod: hide summary blurbs on list pages
+  showtoc: false                 # PaperMod: show TOC by default
+  tocopen: false                 # PaperMod: keep TOC expanded
 
-  # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+  assets:                        # PaperMod: asset-pipeline configuration
+    favicon: "<link / abs url>"  # Path or URL to favicon
+    favicon16x16: "<link / abs url>"  # 16×16 icon for older browsers
+    favicon32x32: "<link / abs url>"  # 32×32 icon
+    apple_touch_icon: "<link / abs url>"  # iOS Home-screen icon
+    safari_pinned_tab: "<link / abs url>"  # Safari pinned tab icon
 
-  socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+  label:                         # PaperMod: label on home page header
+    text: "Home"                 # Text of the label
+    icon: /apple-touch-icon.png  # Path to icon image
+    iconHeight: 35               # CSS height for the icon
 
-  analytics:
-    google:
+  profileMode:                   # PaperMod: enable site “profile” mode
+    enabled: false               # Turn on/off profile mode explicitly
+    title: ExampleSite           # Profile page main title
+    subtitle: "This is subtitle" # Profile page subtitle
+    imageUrl: "<img location>"   # Profile avatar image path/URL
+    imageWidth: 120              # Avatar display width
+    imageHeight: 120             # Avatar display height
+    imageTitle: my image         # Alt/title text for avatar
+    buttons:                     # Custom buttons under profile
+      - name: Posts              # Button label
+        url: posts               # URL or section for this button
+      - name: Tags               # Second button label
+        url: tags                # Linking to /tags/
+
+  homeInfoParams:                # PaperMod: small welcome block on home
+    Title: "Hi there \U0001F44B" # Greeting text
+    Content: Welcome to my blog  # Body text under greeting
+
+  socialIcons:                   # PaperMod: social media icons list
+    - name: x                    # Icon name (x.com)
+      url: "https://x.com/"      # Link target
+    - name: stackoverflow        # StackOverflow icon
+      url: "https://stackoverflow.com"  # Link to SO
+    - name: github               # GitHub icon
+      url: "https://github.com/" # Link to GitHub
+
+  analytics:                     # Verification tags for search engines
+    google:                      # Google site verification tag
       SiteVerificationTag: "XYZabc"
-    bing:
+    bing:                        # Bing Webmaster verification
       SiteVerificationTag: "XYZabc"
-    yandex:
+    yandex:                      # Yandex Webmaster verification
       SiteVerificationTag: "XYZabc"
 
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+  cover:                         # PaperMod: cover image display rules
+    hidden: true                 # Hide cover on all pages
+    hiddenInList: true           # Hide cover on list pages
+    hiddenInSingle: true         # Hide cover on single post pages
 
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+  editPost:                      # PaperMod: “Edit this post” link settings
+    URL: "https://github.com/<path_to_repo>/content"  # Base URL for editing via GitHub
+    Text: "Suggest Changes"      # Anchor text for edit link
+    appendFilePath: true         # Append the actual file path to the link
 
-  # for search
-  # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
+  fuseOpts:                      # Fuse.js search options for client-side search
+    isCaseSensitive: false       # Search case sensitivity
+    shouldSort: true             # Sort results by score
+    location: 0                  # Approximate distance measure in text
+    distance: 1000               # Maximum distance a match can be from location
+    threshold: 0.4               # At what point to give up vs match
+    minMatchCharLength: 0        # Minimum number of characters that must match
+    limit: 10                    # Maximum number of search results
+    keys: ["title", "permalink", "summary", "content"]  # Fields to include in client search
 
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+# ── Site Menu ────────────────────────────────────────────────────────────────
+menu:                            # Define site-wide menus accessible via .Site.Menus
+  main:                          # Main navigation menu identifier
+    - identifier: categories     # Internal menu key
+      name: categories           # Text label in the menu
+      url: /categories/          # URL path for the menu link
+      weight: 10                 # Order of the item (lower first)
+    - identifier: tags           # Next menu item key
+      name: tags                 # Link label
+      url: /tags/                # URL path
+      weight: 20                 # Position in menu
+    - identifier: example        # External link key
+      name: example.org          # Display link text
+      url: https://example.org   # Absolute URL for external menu
+      weight: 30                 # Menu ordering
 
-caches:
-  assets:
-    dir: :cacheDir/_gen
-    maxAge: -1
-  getcsv:
+# ── Syntax Highlighting ─────────────────────────────────────────────────────
+pygmentsUseClasses: true         # Use CSS classes instead of inline styles for Chroma highlighting
+markup:                          # Configure Hugo’s built-in Chroma highlighter
+  highlight:                     # Highlight settings sub-section
+    noClasses: false             # Do not strip classes (keep <span class="…">)
+
+# ── Caching Directories ─────────────────────────────────────────────────────
+caches:                          # Resource caching settings (Hugo Pipes)
+  assets:                        # Cache for processed assets (JS/CSS)
+    dir: :cacheDir/_gen          # Subfolder under --cacheDir for generated assets
+    maxAge: -1                   # Never expire this cache (infinite)
+  getcsv:                        # Cache for getCSV data fetches
+    dir: :cacheDir/:project      # Per-project cache directory
+    maxAge: -1                   # No automatic expiry
+  getjson:                       # Cache for getJSON fetches
     dir: :cacheDir/:project
     maxAge: -1
-  getjson:
+  getresource:                   # Cache for getResource calls
     dir: :cacheDir/:project
     maxAge: -1
-  getresource:
-    dir: :cacheDir/:project
-    maxAge: -1
-  images:
+  images:                        # Cache for image processing
     dir: :cacheDir/images
     maxAge: -1
-  misc:
+  misc:                          # Cache for miscellaneous operations
     dir: :cacheDir/:project
     maxAge: -1
-  modules:
+  modules:                       # Cache for Hugo Modules downloads
     dir: :cacheDir/modules
     maxAge: -1
