@@ -63,22 +63,21 @@ params:                          # Free-form parameters accessible via .Site.Par
     iconHeight: 35               # CSS height for the icon
 
   profileMode:                   # PaperMod: enable site “profile” mode
-    enabled: false               # Turn on/off profile mode explicitly
-    title: ExampleSite           # Profile page main title
+    enabled: true               # Turn on/off profile mode explicitly
+    title: periphery           # Profile page main title
     subtitle: "This is subtitle" # Profile page subtitle
-    imageUrl: "<img location>"   # Profile avatar image path/URL
-    imageWidth: 120              # Avatar display width
-    imageHeight: 120             # Avatar display height
-    imageTitle: my image         # Alt/title text for avatar
+    #imageUrl: "<img location>"   # Profile avatar image path/URL
+    #imageWidth: 120              # Avatar display width
+    #imageHeight: 120             # Avatar display height
+    #imageTitle: my image         # Alt/title text for avatar
     buttons:                     # Custom buttons under profile
-      - name: Posts              # Button label
-        url: posts               # URL or section for this button
-      - name: Tags               # Second button label
-        url: tags                # Linking to /tags/
+      - name: All Posts              # Button label
+        url: archives               # URL or section for this button
+      - name: Search               # Second button label
+        url: search                # Linking to /tags/
 
   homeInfoParams:                # PaperMod: small welcome block on home
-    Title: "Hi there \U0001F44B" # Greeting text
-    Content: Welcome to my blog  # Body text under greeting
+    Content: We are interested in game dev, tools and workflows. We are working on our first game working-titled "War Video Report".  # Body text under greeting
 
   socialIcons:                   # PaperMod: social media icons >> list https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
     - name: bluesky                    # Icon name (x.com)
