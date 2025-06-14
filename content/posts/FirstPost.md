@@ -9,6 +9,7 @@ searchHidden: false               # PaperMod: omit this page from client-side se
 
 comments: true
 bluesky_post_uri: "https://bsky.app/profile/washingtonpost.com/post/3lrl42ja75k2x"
+data-bsky-author: "Testautor"
 
 cover:                            # Page cover image settings
   image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg"       # Path or URL to the cover image
