@@ -33,6 +33,8 @@ params:                          # Free-form parameters accessible via .Site.Par
   DateFormat: "January 2, 2006"  # Global date formatting string for use in templates
   defaultTheme: auto             # PaperMod option: auto, dark, or light
   disableThemeToggle: false      # PaperMod option: hide the light/dark switch
+  label:
+    text: "periphery"     # ← Your custom sidebar title
 
   ShowReadingTime: true          # PaperMod: show estimated reading time
   ShowShareButtons: true         # PaperMod: display social share icons
@@ -79,9 +81,9 @@ params:                          # Free-form parameters accessible via .Site.Par
   homeInfoParams:                # PaperMod: small welcome block on home
     Content: Small indie game studio working on our first game working-titled "War Video Report".  # Body text under greeting
 
-  socialIcons:                   # PaperMod: social media icons >> list https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
-    - name: bluesky                    # Icon name (x.com)
-      url: "https://bsky.app/profile/volution.bsky.social"      # Link target
+  #socialIcons:                   # PaperMod: social media icons >> list https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
+  #  - name: bluesky                    # Icon name (x.com)
+  #    url: "https://bsky.app/profile/volution.bsky.social"      # Link target
 
   #analytics:                     # Verification tags for search engines
     #google:                      # Google site verification tag
