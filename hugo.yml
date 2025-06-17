@@ -25,10 +25,10 @@ minify:                          # Hugo Pipes minification options
 # ── Custom Parameters ──────────────────────────────────────────────────────
 params:                          # Free-form parameters accessible via .Site.Params
   env: production                # Custom flag your templates/theme can use (e.g., enable analytics in prod)
-  title: Periphery Blog          # Theme-specific subtitle/title override under .Site.Params.title
-  description: "Blog of Periphery"  # Meta description for SEO and social sharing
-  keywords: [Blog, Periphery, Indie Games Dev]  # SEO keywords exposed via theme’s meta tags
-  author: Periphery              # Default author name for posts, used by theme templates
+  title: periphery          # Theme-specific subtitle/title override under .Site.Params.title
+  description: "blog of periphery"  # Meta description for SEO and social sharing
+  keywords: [blog, periphery, indie games dev]  # SEO keywords exposed via theme’s meta tags
+  author: periphery              # Default author name for posts, used by theme templates
   images: ["<link or path of image for opengraph, twitter-cards>"]  # Default social preview images
   DateFormat: "January 2, 2006"  # Global date formatting string for use in templates
   defaultTheme: auto             # PaperMod option: auto, dark, or light
