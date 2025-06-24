@@ -12,9 +12,9 @@ bluesky_post_uri: "https://bsky.app/profile/wednesdaytoast.bsky.social/post/3ls7
 bluesky_post_author: "volution.bsky.social"
 
 cover:                            # Page cover image settings
-  image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg"       # Path or URL to the cover image
-  alt: "a dog"               # Alt text for accessibility
-  caption: "a picture of a dog"               # Caption displayed under the cover
+  image: "https://upload.wikimedia.org/wikipedia/commons/9/96/Jordi_cat_portrait.jpg"       # Path or URL to the cover image
+  alt: "a cat"               # Alt text for accessibility
+  caption: "a picture of a cat"               # Caption displayed under the cover
   relative: false                 # true if image is in a page bundle; false for static files
   hidden: false                   # true to hide the cover only on this page
 
