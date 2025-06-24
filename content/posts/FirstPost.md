@@ -21,4 +21,4 @@ cover:                            # Page cover image settings
 ---
 
 Hello World
-![alt text](/src/image.jpg "Title")
+![alt text](/image.jpg "Title")
