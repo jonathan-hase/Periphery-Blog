@@ -35,7 +35,7 @@ params:                          # Free-form parameters accessible via .Site.Par
   disableThemeToggle: false      # PaperMod option: hide the light/dark switch
   ShowReadingTime: true          # PaperMod: show estimated reading time
   ShowShareButtons: false         # PaperMod: display social share icons
-  ShowPostNavLinks: true         # PaperMod: show Prev/Next post links
+  ShowPostNavLinks: false         # PaperMod: show Prev/Next post links
   ShowBreadCrumbs: true          # PaperMod: show breadcrumb trail
   ShowCodeCopyButtons: true      # PaperMod: show “Copy” buttons on code blocks
   ShowWordCount: true            # PaperMod: display word count on posts
