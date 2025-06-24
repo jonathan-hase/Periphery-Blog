@@ -2,7 +2,7 @@
 baseURL: "https://jonathan-hase.github.io/Periphery-Blog/"   # The full, absolute URL of your published site, including protocol and trailing slash
 
 # ── Site Identity ──────────────────────────────────────────────────────────
-title: Periphery Blog            # The human-readable title of your site, exposed as .Site.Title
+title: periphery blog            # The human-readable title of your site, exposed as .Site.Title
 theme: PaperMod                  # The name of the theme directory under themes/, or the Hugo Module path
 
 # ── Pagination (Hugo v0.128+) ──────────────────────────────────────────────
@@ -25,8 +25,8 @@ minify:                          # Hugo Pipes minification options
 # ── Custom Parameters ──────────────────────────────────────────────────────
 params:                          # Free-form parameters accessible via .Site.Params
   env: production                # Custom flag your templates/theme can use (e.g., enable analytics in prod)
-  title: periphery          # Theme-specific subtitle/title override under .Site.Params.title
-  description: "blog of periphery"  # Meta description for SEO and social sharing
+  title: periphery blog          # Theme-specific subtitle/title override under .Site.Params.title
+  description: "Game development, workflows, and tips from a small indie studio."  # Meta description for SEO and social sharing
   keywords: [blog, periphery, indie games dev]  # SEO keywords exposed via theme’s meta tags
   author: periphery              # Default author name for posts, used by theme templates
   images: ["<link or path of image for opengraph, twitter-cards>"]  # Default social preview images

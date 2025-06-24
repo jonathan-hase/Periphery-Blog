@@ -2,7 +2,7 @@
 title: "My 1st post"              # The page title, shown in the browser and in listings
 description: "The first post of periphery"         # Meta description for SEO and social sharing
 date: 2020-09-15T11:30:03+00:00    # Publication timestamp, used for sorting and display
-author: "Periphery"               # Author name; can also be a list for multiple authors
+author: "periphery"               # Author name; can also be a list for multiple authors
 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: false               # PaperMod: omit this page from client-side search
