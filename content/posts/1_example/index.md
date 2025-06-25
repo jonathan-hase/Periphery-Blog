@@ -4,8 +4,8 @@ description: "The second post of periphery"         # Meta description for SEO a
 date: 2020-09-15T11:30:03+00:00    # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
 
-draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
-searchHidden: false               # PaperMod: omit this page from client-side search
+draft: true                      # Hugo: if true, page is omitted unless built with --buildDrafts
+searchHidden: true               # PaperMod: omit this page from client-side search
 
 comments: true
 bluesky_post_uri: "https://bsky.app/profile/wednesdaytoast.bsky.social/post/3ls77ccqxz22a"
