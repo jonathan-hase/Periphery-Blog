@@ -20,5 +20,125 @@ cover:                            # Page cover image settings
 
 ---
 
-Hello World
-![alt text](/images/image1.jpg "Title")
+
+### Heading
+
+# H1
+## H2
+### H3
+
+### Bold
+
+**bold text**
+
+### Italic
+
+*italicized text*
+
+### Blockquote
+
+> blockquote
+
+### Ordered List
+
+1. First item
+2. Second item
+3. Third item
+
+### Unordered List
+
+- First item
+- Second item
+- Third item
+
+### Code
+
+`code`
+
+### Horizontal Rule
+
+—
+
+### Link
+
+[periphery blog](https://periphery.blog)
+
+### Image
+
+![alt text](/images/eiffeltower-global.jpg „Title“)
+
+### Table
+
+| Syntax | Description |
+| ———— | ———— |
+| Header | Title |
+| Paragraph | Text |
+
+### Fenced Code Block
+
+``` LANG [OPTIONS]
+{
+  „firstName“: „John“,
+  „lastName“: „Smith“,
+  „age“: 25
+}
+```
+MORE ABOUT THE LANG CODES AND OPTIONS HERE: https://gohugo.io/content-management/syntax-highlighting/
+
+### Annotated Code Block
+{{< highlight go „linenos=inline, hl_lines=3 6-8, style=emacs“ >}}
+package main
+
+import „fmt“
+
+func main() {
+    for i := 0; i < 3; i++ {
+        fmt.Println(„Value of i:“, i)
+    }
+}
+{{< /highlight >}}
+
+MORE https://gohugo.io/shortcodes/highlight/
+
+### Footnote
+
+Here’s a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+### Heading ID
+
+Wichtig für webhooks (URLs zu Überschriften)
+
+### My Great Heading {#custom-id} 
+
+### Definition List
+
+term
+: definition
+
+### Strikethrough
+
+~~The world is flat.~~
+
+### Task List
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+### Emoji
+
+That is so funny! :joy: oder copy paste rein da 📯
+
+### Highlight
+
+I need to highlight these ==very important words==.
+
+### Subscript
+
+H~2~O
+
+### Superscript
+
+X^2^

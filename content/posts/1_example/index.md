@@ -21,4 +21,4 @@ cover:                            # Page cover image settings
 ---
 
 Hello World
-![alt text](images/image2.jpg "Title")
+![alt text](images/eiffeltower-local.jpg "Title")
