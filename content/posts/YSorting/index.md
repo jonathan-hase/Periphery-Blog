@@ -13,11 +13,11 @@ bluesky_post_uri: ""
 bluesky_post_author: "volution.bsky.social"
 
 cover:                            # Page cover image settings
-  image: "images/08isocalc.png"   # Path or URL to the cover image
-  alt: "a dog"                    # Alt text for accessibility
-  caption: "a picture of a dog"   # Caption displayed under the cover
+  image: ""   # Path or URL to the cover image
+  alt: ""                    # Alt text for accessibility
+  caption: ""   # Caption displayed under the cover
   relative: false                 # true if image is in a page bundle; false for static files
-  hidden: false                   # true to hide the cover only on this page
+  hidden: true                   # true to hide the cover only on this page
 
 ---
 
