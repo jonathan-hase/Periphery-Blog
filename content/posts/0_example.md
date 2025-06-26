@@ -74,7 +74,7 @@ cover:                            # Page cover image settings
 | Header | Title |
 | Paragraph | Text |
 
-### Fenced Code Block
+### Fenced Code Block -> better use annotated code bloc, that has more styling options and can get annotated
 
 ``` LANG [OPTIONS]
 {
@@ -86,7 +86,7 @@ cover:                            # Page cover image settings
 MORE ABOUT THE LANG CODES AND OPTIONS HERE: https://gohugo.io/content-management/syntax-highlighting/
 
 ### Annotated Code Block
-{{< highlight go "linenos=inline, hl_lines=3 6-8, style=emacs" >}}
+{{< highlight go "linenos=inline, hl_lines=3 6-8" >}}
 package main
 
 import „fmt“
@@ -129,16 +129,11 @@ term
 
 ### Emoji
 
-That is so funny! :joy: oder copy paste rein da 📯
+copy paste rein da 📯
 
-### Highlight
 
-I need to highlight these ==very important words==.
+### Horizontal Line -> eine Leerzeile über und unter der Line
 
-### Subscript
+---
 
-H~2~O
 
-### Superscript
-
-X^2^

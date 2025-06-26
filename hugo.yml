@@ -140,6 +140,7 @@ pygmentsUseClasses: true         # Use CSS classes instead of inline styles for 
 markup:                          # Configure Hugo’s built-in Chroma highlighter
   highlight:                     # Highlight settings sub-section
     noClasses: false             # Do not strip classes (keep <span class="…">)
+    # style: "modus-vivendi"
 
 # ── Caching Directories ─────────────────────────────────────────────────────
 caches:                          # Resource caching settings (Hugo Pipes)
