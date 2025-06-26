@@ -3,6 +3,7 @@ title: "Display order in our isometric game"               # The page title, sho
 description: "Display order in our isometric game"         # Meta description for SEO and social sharing
 date: 2025-06-25T11:30:03+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
+showtoc: false                     # Show Content Overview at top of post. Default false
 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: false               # PaperMod: omit this page from client-side search
