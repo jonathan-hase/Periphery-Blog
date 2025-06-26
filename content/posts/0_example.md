@@ -86,7 +86,7 @@ cover:                            # Page cover image settings
 MORE ABOUT THE LANG CODES AND OPTIONS HERE: https://gohugo.io/content-management/syntax-highlighting/
 
 ### Annotated Code Block
-{{< highlight go „linenos=inline, hl_lines=3 6-8, style=emacs“ >}}
+{{< highlight go "linenos=inline, hl_lines=3 6-8, style=emacs" >}}
 package main
 
 import „fmt“
