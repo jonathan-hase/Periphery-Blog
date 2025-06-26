@@ -1,10 +1,11 @@
 ---
-title: "My 1st post"              # The page title, shown in the browser and in listings
-description: "The first post of periphery"         # Meta description for SEO and social sharing
+title: "Markdown Cheat Sheet"              # The page title, shown in the browser and in listings
+description: "All the Tricks of Markdown!"         # Meta description for SEO and social sharing
 date: 2020-09-15T11:30:03+00:00    # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
+showtoc: true                     # Show Table of Content (toc) at top of post. Default false
 
-draft: true                      # Hugo: if true, page is omitted unless built with --buildDrafts
+draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: true               # PaperMod: omit this page from client-side search
 
 comments: true
@@ -74,7 +75,7 @@ cover:                            # Page cover image settings
 | Header | Title |
 | Paragraph | Text |
 
-### Fenced Code Block
+### Fenced Code Block -> better use annotated code bloc, that has more styling options and can get annotated
 
 ``` LANG [OPTIONS]
 {
@@ -86,7 +87,7 @@ cover:                            # Page cover image settings
 MORE ABOUT THE LANG CODES AND OPTIONS HERE: https://gohugo.io/content-management/syntax-highlighting/
 
 ### Annotated Code Block
-{{< highlight go „linenos=inline, hl_lines=3 6-8, style=emacs“ >}}
+{{< highlight go "linenos=inline, hl_lines=3 6-8" >}}
 package main
 
 import „fmt“
@@ -129,16 +130,11 @@ term
 
 ### Emoji
 
-That is so funny! :joy: oder copy paste rein da 📯
+copy paste rein da 📯
 
-### Highlight
 
-I need to highlight these ==very important words==.
+### Horizontal Line -> eine Leerzeile über und unter der Line
 
-### Subscript
+---
 
-H~2~O
 
-### Superscript
-
-X^2^

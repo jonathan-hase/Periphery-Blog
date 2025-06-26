@@ -46,8 +46,8 @@ params:                          # Free-form parameters accessible via .Site.Par
   comments: true                # PaperMod: enable/disable comments section
   hidemeta: false                # PaperMod: hide metadata (date, author) on posts
   hideSummary: false             # PaperMod: hide summary blurbs on list pages
-  showtoc: true                 # PaperMod: show TOC by default
-  tocopen: true                 # PaperMod: keep TOC expanded
+  showtoc: false                 # PaperMod: show TOC by default
+  tocopen: false                 # PaperMod: keep TOC expanded
 
   #assets:                        # PaperMod: asset-pipeline configuration
     #favicon: "<link / abs url>"  # Path or URL to favicon
@@ -140,6 +140,7 @@ pygmentsUseClasses: true         # Use CSS classes instead of inline styles for 
 markup:                          # Configure Hugo’s built-in Chroma highlighter
   highlight:                     # Highlight settings sub-section
     noClasses: false             # Do not strip classes (keep <span class="…">)
+    # style: "modus-vivendi"
 
 # ── Caching Directories ─────────────────────────────────────────────────────
 caches:                          # Resource caching settings (Hugo Pipes)
