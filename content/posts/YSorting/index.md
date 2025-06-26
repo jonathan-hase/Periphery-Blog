@@ -1,7 +1,7 @@
 ---
 title: "Display order in our isometric game"               # The page title, shown in the browser and in listings
 description: "Display order in our isometric game"         # Meta description for SEO and social sharing
-date: 2025-06-26T11:30:03+00:00   # Publication timestamp, used for sorting and display
+date: 2025-06-25T11:30:03+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
