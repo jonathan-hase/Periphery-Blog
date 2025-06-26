@@ -1,20 +1,20 @@
 ---
-title: "Display order in our isometric game"              # The page title, shown in the browser and in listings
+title: "Display order in our isometric game"               # The page title, shown in the browser and in listings
 description: "Display order in our isometric game"         # Meta description for SEO and social sharing
-date: 2025-06-26T11:30:03+00:00    # Publication timestamp, used for sorting and display
+date: 2025-06-26T11:30:03+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: false               # PaperMod: omit this page from client-side search
 
-comments: true
+comments: false
 bluesky_post_uri: ""
 bluesky_post_author: "volution.bsky.social"
 
 cover:                            # Page cover image settings
-  image: "images/08isocalc.png"       # Path or URL to the cover image
-  alt: "a dog"               # Alt text for accessibility
-  caption: "a picture of a dog"               # Caption displayed under the cover
+  image: "images/08isocalc.png"   # Path or URL to the cover image
+  alt: "a dog"                    # Alt text for accessibility
+  caption: "a picture of a dog"   # Caption displayed under the cover
   relative: false                 # true if image is in a page bundle; false for static files
   hidden: false                   # true to hide the cover only on this page
 
