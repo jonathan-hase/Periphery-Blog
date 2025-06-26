@@ -12,11 +12,11 @@ bluesky_post_uri: ""
 bluesky_post_author: "volution.bsky.social"
 
 cover:                            # Page cover image settings
-  image: "images/08isocalc.png"       # Path or URL to the cover image
-  alt: "a dog"               # Alt text for accessibility
-  caption: "a picture of a dog"               # Caption displayed under the cover
+  image: ""       # Path or URL to the cover image
+  alt: ""               # Alt text for accessibility
+  caption: ""               # Caption displayed under the cover
   relative: false                 # true if image is in a page bundle; false for static files
-  hidden: false                   # true to hide the cover only on this page
+  hidden: true                   # true to hide the cover only on this page
 
 ---
 
@@ -62,7 +62,7 @@ In our game however the player is supposed to move freely in the world. Object s
 Our first approach was to place invisible trigger areas (green in the image above). These areas read out the Z order of the environmental object they are touching and handing of that value to the player. The player then adopts the the Z order of environmental object attached to the trigger area and adds +1 so it is displayed in front. The normal Y sorting is disabled while the player is in touch with the trigger area.
 
 The trigger areas could be placed automatically via code. But that would be all environmental objects would need to stick to a quite rigid grid system. Also shapes with a more organic footprint are not possible.
-Alternatively the override areas would need to be place by hand. Building a level would be much more labor intensive.
+Alternatively the override areas would need to be placed by hand. Building (and revising) a level would be much more labor intensive.
 
 Our second approach was to solve this problem in code.
 
@@ -76,20 +76,20 @@ When we talked about coordinates so far, we meant a Cartesian coordinate system 
 
 For simplicity reasons let us assume that the origin point of the wall element is on the Cartesian coordinates 0,0. In that spot Cartesian and isometric coordinates are identical.
 
-cartX = isoX = 0
-cartY = isoY = 0
+> cartX = isoX = 0
+> cartY = isoY = 0
 
 Every other point on our Cartesian coordinate system can be transposed to a value in the isometric coordinate system. 
 
 The formula for achieving this in our pixel-optimized isometric world is:
 
-isoX = (x - y) * (tileWidth / 2)
-isoY = (x + y) * (tileHeight / 2)
+> isoX = (x - y) * (tileWidth / 2)
+> isoY = (x + y) * (tileHeight / 2)
 
-Our tile specifications are only relevant in so much as that the tiles are half as high, as they are wide. Thus we can simplify to:
+Our tile specifications are only relevant to the extent, that the tiles are half as high, as they are wide. Thus we can simplify to:
 
-isoX = (x - y) 
-isoY = (x + y) /2
+> isoX = (x - y) 
+> isoY = (x + y) /2
 
 ![alt text](images/08isocalc.png)
 
@@ -103,13 +103,13 @@ Coming from the right, the player should be displayed in front of the object as 
 
 If the player approaches from left or right can be determined via the player’s Cartesian X coordinate.
 
-if PlayerX > ObjectX and PlayerIsoX > ObjectIsoX
-then set PlayerZ = ObjectZ+1
+> if PlayerX > ObjectX and PlayerIsoX > ObjectIsoX
+> then set PlayerZ = ObjectZ+1
 
 Coming from the left, the player should be displayed in front as long as he does not overstep the isometric X axis.
 
-if PlayerX < ObjectX and PlayerIsoY > ObjectIsoY
-then set PlayerZ = ObjectZ+1
+> if PlayerX < ObjectX and PlayerIsoY > ObjectIsoY
+> then set PlayerZ = ObjectZ+1
 
 In all other cases, when player is in no collision with objects, the usual Y sorting applies. Syncing Z order directly to the isometric Y values is not possible, because it does not account for the different approaches from left and right. Cases need to be separated to determine which value, iso Y or iso X, determines Z order.
 
@@ -119,15 +119,15 @@ This could be the end of the story. But there is more.
 
 ![alt text](images/10multiplecol.png)
 
-When the player was in collision with multiple environmental objects, it could happen that it would be sorted already behind an object it should still be in front of. In the image above the blue trigger of the player is in collision with the collision of both wall elements and adopt the Z order from the right one, and is thus sorted behind the other wall element.
+When the player was in collision with multiple environmental objects, it could happen that it would be sorted already behind an object it should still be in front of. In the image above the blue trigger of the player is in collision with the collision of both wall elements and adopt the Z order from the one on the right, and is thus sorted behind the other wall element.
 
 To prevent this the function is taking the highest Z order of the elements the player is touching.
 
-It occurred to us then, that a simple collision detection between the player and environmental objects and setting the player’s Z order to +1 of the object he collides with is simply enough!
+It occurred to us then, that a simple collision detection between the player and environmental objects and setting the player’s Z order to +1 of the object with the highest Z order he collides with is simply enough!
 
 ![alt text](images/11multiplecol.png)
 
-Cases where the player would collide with objects that are in front of them, as the lower column in the image are prevented by the fact, that the blue sorting feeler can never touch objects that are in a Cartesian sense lower than the player. Blue cannot touch the orange of the column in this case.
+Cases where the player would collide with objects that are in front of them, (as for example the lower column in the image above) are prevented by the fact, that the blue sorting feeler can never touch objects that are in a Cartesian sense lower than the player. Blue cannot touch the orange of the column in this case.
 
 This way we were able to string this whole problem into one single short function in our code.
 
