@@ -3,7 +3,7 @@ title: "Markdown Cheat Sheet"              # The page title, shown in the browse
 description: "All the Tricks of Markdown!"         # Meta description for SEO and social sharing
 date: 2020-09-15T11:30:03+00:00    # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
-showtoc: true                     # Show Content Overview at top of post. Default false
+showtoc: true                     # Show Table of Content (toc) at top of post. Default false
 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: true               # PaperMod: omit this page from client-side search

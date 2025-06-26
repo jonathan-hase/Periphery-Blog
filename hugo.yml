@@ -47,7 +47,7 @@ params:                          # Free-form parameters accessible via .Site.Par
   hidemeta: false                # PaperMod: hide metadata (date, author) on posts
   hideSummary: false             # PaperMod: hide summary blurbs on list pages
   showtoc: false                 # PaperMod: show TOC by default
-  tocopen: true                 # PaperMod: keep TOC expanded
+  tocopen: false                 # PaperMod: keep TOC expanded
 
   #assets:                        # PaperMod: asset-pipeline configuration
     #favicon: "<link / abs url>"  # Path or URL to favicon
