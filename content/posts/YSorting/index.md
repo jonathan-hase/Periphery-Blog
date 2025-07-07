@@ -21,7 +21,7 @@ cover:                            # Page cover image settings
 
 ---
 
-### Y Sort? 🥁
+# Y Sort? 🥁
 Our game looks 3D, but it is actually 2D. All characters and environmental objects are really sprites.
 
 ![alt text](images/01groundcollision_r.png)
@@ -30,7 +30,7 @@ We simulate a 3D world by defining isometric collision shapes (red areas in the 
 A two-dimensional world has a coordinate system with a vertical Y axis and a horizontal X axis.
 When our objects overlap. It must be determined what is going to be displayed in front and what behind.
 
-### The Basic Setup
+# The Basic Setup
 We start by defining for each object an origin point. That is the point that is lowest on its Y direction. The origin points are marked in green in the image below.
 
 ![alt text](images/02axisandcol_r.png)
@@ -43,7 +43,7 @@ A simple way of handling now which of our overlapping objects is displayed in fr
 The image above shows each object’s origin point coordinates. The Y value is synced to the Z order. The lower soldier’s Z order value is 190, the wall’s Z order value is 173. The wall’s number is lower, that means the soldier is displayed in front of the wall. The upper soldier is much higher on the map. Its Z order value is 84, thus lower than the wall’s value and he is displayed behind.
 This process of syncing Z order to Y values is called “Y sorting”.
 
-### In the isometric World
+# In the isometric World
 In a purely 2D game like a typical shoot ‘ em up or jump and run, this method would be all we need. In our isometric game we soon run into problems. Our world is displayed as three dimensional, but in reality - under the hood - it is only two dimensional.
 
 ![alt text](images/04overlap_r.png)
@@ -53,13 +53,13 @@ The problem only occurs with environmental objects of a certain size or “isome
 
 ![alt text](images/05ysortoverride_r.png)
 
-### Solution „Trigger Plate“
+# Solution „Trigger Plate“
 Our first approach was to place invisible trigger areas (green in the image above). These areas read out the Z order of the environmental object they are touching and hand that value to the player. The player then adopts the Z order of the environmental object attached to the trigger area and adds +1 so it is displayed in front. The normal Y sorting is disabled while the player is in touch with the trigger area.
 The trigger areas could be placed automatically via code. But that would mean all environmental objects would need to stick to a quite rigid grid system. Also, shapes with a more organic footprint are not possible. Alternatively, the override areas would need to be placed by hand. Building a level would be much more labour-intensive.
 Our second approach was to solve this problem in code.
 ![alt text](images/06frontbehind_r.png)
 
-### Solution „Isometric Coordinates“
+# Solution „Isometric Coordinates“
 The fundamental question is: why is the soldier on the left behind the object and the soldier on the right in front of the wall, when their Y value, and thus Z order, are the same? Further: if we flip the wall, what would change in the player characters’ Z order, so that now the left one would be in front?
 
 ![alt text](images/07cartisooverlay_r.png)
