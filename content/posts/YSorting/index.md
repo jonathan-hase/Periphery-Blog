@@ -13,18 +13,18 @@ bluesky_post_uri: ""
 bluesky_post_author: "volution.bsky.social"
 
 cover:                            # Page cover image settings
-  image: ""   # Path or URL to the cover image
+  image: "images/03yisz_r.png"   # Path or URL to the cover image
   alt: ""                    # Alt text for accessibility
   caption: ""   # Caption displayed under the cover
   relative: false                 # true if image is in a page bundle; false for static files
-  hidden: true                   # true to hide the cover only on this page
+  hidden: false                   # true to hide the cover only on this page
 
 ---
 
 ## Y Sort? 🥁
 Our game looks 3D, but it is actually 2D. All characters and environmental objects are really sprites.
 
-![alt text](images/01groundcollision_r.png)
+![alt text](images/01groundcollision_r43.png)
 
 We simulate a 3D world by defining isometric collision shapes (red areas in the image above) in the shape of the “footprint” of the objects. The player character itself also has a footprint. When the footprints collide, the player cannot pass the object.
 A two-dimensional world has a coordinate system with a vertical Y axis and a horizontal X axis.
@@ -33,12 +33,12 @@ When our objects overlap. It must be determined what is going to be displayed in
 ## The Basic Setup
 We start by defining for each object an origin point. That is the point that is lowest on its Y direction. The origin points are marked in green in the image below.
 
-![alt text](images/02axisandcol_r.png)
+![alt text](images/02axisandcol_r43.png)
 
 When placing an object in our engine, it automatically receives not only X and Y coordinates, but also a Z order number (sometimes called “Z index”). This third value determines how much “in front”, towards the camera, the object is.
 A simple way of handling now which of our overlapping objects is displayed in front and which one behind is to simply sync the objects’ Z order to their vertical Y value.
 
-![alt text](images/03yisz_r.png)
+![alt text](images/03yisz_r43.png)
 
 The image above shows each object’s origin point coordinates. The Y value is synced to the Z order. The first soldier’s Z order value is 190, the wall’s Z order value is 173. The wall’s number is lower, that means the soldier is displayed in front of the wall. The upper soldier is much higher on the map. Its Z order value is 84, thus lower than the wall’s value and he is displayed behind.
 This process of syncing Z order to Y values is called “Y sorting”.
@@ -46,23 +46,23 @@ This process of syncing Z order to Y values is called “Y sorting”.
 ## In the isometric World
 In a purely 2D game like a typical shoot ‘ em up or jump and run, this method would be all we need. In our isometric game we soon run into problems. Our world is displayed as three dimensional, but in reality - under the hood - it is only two dimensional.
 
-![alt text](images/04overlap_r.png)
+![alt text](images/04overlap_r43.png)
 
 There are cases when a sprite’s Y value becomes smaller than another sprite’s Y value and it is sorted already behind, even though in our isometric world view it should still be displayed in front. In the image above, the player’s origin point, that determines its Z order, is above the origin point of the wall element. The player’s Z order value becomes smaller than the wall’s value. The player is sorted behind the wall. Simply moving up the origin point higher on the player sprite would create similar problems - the player would be displayed on top of objects it should not be.
 The problem only occurs with environmental objects of a certain size or “isometric side length”. If the world were divided into a grid, all objects adhere to the grid and the player’s movement is strictly limited to movement on the grid. Each grid segment could have a determined Z order. Think of an isometric chess game, with no animations. In our game, however, the player is supposed to move freely in the world. Object sizes and level design should be more varied, free, and flexible.
 
-![alt text](images/05ysortoverride_r.png)
+![alt text](images/05ysortoverride_r43.png)
 
 ## Solution „Trigger Plate“
 Our first approach was to place invisible trigger areas (green in the image above). These areas read out the Z order of the environmental object they are touching and hand that value to the player. The player then adopts the Z order of the environmental object attached to the trigger area and adds +1 so it is displayed in front. The normal Y sorting is disabled while the player is in touch with the trigger area.
 The trigger areas could be placed automatically via code. But that would mean all environmental objects would need to stick to a quite rigid grid system. Also, shapes with a more organic footprint are not possible. Alternatively, the override areas would need to be placed by hand. Building a level would be much more labour-intensive.
 Our second approach was to solve this problem in code.
-![alt text](images/06frontbehind_r.png)
+![alt text](images/06frontbehind_r43.png)
 
 ## Solution „Isometric Coordinates“
 The fundamental question is: why is the soldier on the left behind the object and the soldier on the right in front of the wall, when their Y value, and thus Z order, are the same? Further: if we flip the wall, what would change in the player characters’ Z order, so that now the left one would be in front?
 
-![alt text](images/07cartisooverlay_r.png)
+![alt text](images/07cartisooverlay_r43.png)
 
 When we talked about coordinates so far, we meant a Cartesian coordinate system (green) with a vertical Y axis and a horizontal X axis. The solution to our problem comes, however, using a second, isometric coordinate system (pink) in combination with the Cartesian one.
 For simplicity’s sake, let us assume that the origin point of the wall element is on the Cartesian coordinates 0,0. In that spot, Cartesian and isometric coordinates are identical.
@@ -81,12 +81,12 @@ Our tile specifications are only relevant in so much as the tiles are half as hi
 isoX = (x - y)
 isoY = (x + y) /2
 ```
-![alt text](images/08isocalc_r.png)
+![alt text](images/08isocalc_r43.png)
 
 The player character has Cartesian coordinates of 80, -25 and isometric coordinates of 105, 27.5. As our world has a Y axis with negative up, the value is actually 105, -27.5.
 From referring to our objects’ isometric and Cartesian coordinates, we can draw the following inferences:
 
-![alt text](images/09croosy_r.png)
+![alt text](images/09croosy_r43.png)
 
 Coming from the right, the player should be displayed in front of the object as long as he does not overstep the isometric Y axis (as our object’s origin point is conveniently located at 0,0).
 If the player approaches from left or right, it can be determined via the player’s Cartesian X coordinate.
@@ -101,13 +101,13 @@ In all other cases, when the player is in no collision with objects, the usual Y
 We set this up successfully in code. The player sprite is “carrying around” a collision mask that only is detecting object collisions (blue in the image below). A collision then triggers the value comparisons and Y sorting.
 This could be the end of the story. But there is more.
 
-![alt text](images/10multiplecol_r.png)
+![alt text](images/10multiplecol_r43.png)
 
 When the player was in collision with multiple environmental objects, it could happen that it would be sorted already behind an object it should still be in front of. In the image above the blue trigger of the player is in collision with the collision of both wall elements and adopts the Z order from the right one, and is thus sorted behind the other wall element.
 To prevent this the function is taking the highest Z order of the elements the player is touching.
 It occurred to us then, that a simple collision detection between the player and environmental objects and setting the player’s Z order to +1 of the object he collides with is simply enough!
 
-![alt text](images/11multiplecol_r.png)
+![alt text](images/11multiplecol_r43.png)
 
 Cases where the player would collide with objects that are in front of them, as the lower column in the image are prevented by the fact, that the blue sorting feeler can never touch objects that are in a Cartesian sense lower than the player. Blue cannot touch the orange of the column in this case.
 This way we were able to string this whole problem into one single short function in our code.
