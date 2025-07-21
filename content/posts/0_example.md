@@ -5,8 +5,8 @@ date: 2020-09-15T11:30:03+00:00    # Publication timestamp, used for sorting and
 author: "periphery"               # Author name; can also be a list for multiple authors
 showtoc: true                     # Show Table of Content (toc) at top of post. Default false
 
-draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
-searchHidden: true               # PaperMod: omit this page from client-side search
+draft: true                       # Hugo: if true, page is omitted unless built with --buildDrafts
+searchHidden: false               # PaperMod: omit this page from client-side search
 
 comments: true
 bluesky_post_uri: "https://bsky.app/profile/washingtonpost.com/post/3lrl42ja75k2x"
