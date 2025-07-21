@@ -8,7 +8,9 @@ showtoc: false                     # Show Table of Content (toc) at top of post.
 draft: true                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: true               # PaperMod: omit this page from client-side search
 
-comments: true
+weight: 0                         # Sort on Main Page
+
+comments: false
 bluesky_post_uri: ""
 bluesky_post_author: "volution.bsky.social"
 
@@ -16,7 +18,7 @@ cover:                            # Page cover image settings
   image: ""       # Path or URL to the cover image
   alt: ""               # Alt text for accessibility
   caption: ""               # Caption displayed under the cover
-  relative: false                 # true if image is in a page bundle; false for static files
+  relative: true                  # true if image is in a page bundle; false for static files
   hidden: false                   # true to hide the cover only on this page
 
 ---
