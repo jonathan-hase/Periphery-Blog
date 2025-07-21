@@ -43,7 +43,7 @@ The overall biggest issue with FSMs is to keep the states truly separate from ea
 
 ## FSM networks vs flowers
 
-To simplify our FSMs we choose an approach that avoids a too complex network shape with many states being able to transition into each other. Instead we favor a more "flower"-like approach. A the center of the flower is a central state, usually idle, that acts as a transitional state to most of the other states. As an example: you could set up a system that allow states transitioning attack directly to walking and running and taking cover. Better would be to always transition to the idle state right after an attack and from there go to walking, running, etc. separate states you have, the more individual exit conditions you would need to write for each of those. This way we can avoid writing three exit conditions for running and need only one back to idle, that then allow to go to the others in turn. 
+To simplify our FSMs we choose an approach that avoids a too complex network shape with many states being able to transition into each other. Instead we favor a more "flower"-like approach. At the center of the flower is a central state, usually idle, that acts as a transitional state to most of the other states. As an example: you could set up a system that allow states transitioning from attack directly to walking and running and taking cover. Better would be to always transition to the idle state right after an attack and from there go to walking, running, etc. The more separate states you have, the more individual exit conditions you would need to write for each of those, and what's more: keep them consistently maintained as the FSM evolves. By having a more central state, we can avoid writing three exit conditions for running and need only one back to idle, that then allow to go to the others in turn. 
 
 ## FSM in one sheet?
 
@@ -55,7 +55,7 @@ For one of the simpler enemies we now tried an approach to set up the whole FSM 
 
 ## “When animation has finished” - nah
 
-Maybe due to the setup of our objects carrying a separates sprite containing all the animations, we could not make this condition work at all in our FSM exit states. Maybe the sprite is not properly picked and GDevelop does not know which animation is addressed in this statement. Our workaround for this is to call an animation and then simply add a wait, to make sure the animation is played, before moving onwards to the next state. This is not beautiful, but at the moment our only solution.
+Maybe due to the setup of our objects carrying a separates sprite containing all the animations, we could not make this condition work at all in our FSM exit states. Maybe the sprite is not properly picked and GDevelop does not know which animation is addressed in this statement. Our workaround for this is to call an animation and then simply add a wait, to make sure the animation is played, before moving onwards to the next state. This is not beautiful, but at the moment our only solution to ensure animations are played before state changes.
 
 We will read this in a couple of weeks or months and realize how little we understood at the time of writing this. Or we pad ourselves on the back how well we have duct taped all the issues we ran into. :)
 
