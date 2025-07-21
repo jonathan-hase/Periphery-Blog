@@ -1,7 +1,6 @@
 ---
 title: "How we handle Z Order in our isometric game."               # The page title, shown in the browser and in listings
 description: "It took us a while to come up with our current solution, and we’d love to hear your thoughts on it."                   # Meta description for SEO and social sharing
-summary: "Z-order in isometric view? Although our game is built with 2D sprites, we simulate a convincing 3D world by giving each object--and the player--a collision "footprint" that prevents overlap. However, when those footprints intersect visually, we need to decide which sprite appears in front. Classic Y-based depth sorting works in simple top-down views but fails in isometric perspectives, so we developed a dynamic solution: we convert Cartesian coordinates to isometric (isoX, isoY), use collision detection to compare positions and adjust Z-depth accordingly, and fall back to Y-sorting only when no collisions occur."
 
 date: 2025-06-25T11:30:03+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
