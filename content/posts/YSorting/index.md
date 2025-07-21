@@ -8,8 +8,10 @@ showtoc: false                    # Show Table of Content (toc) at top of post. 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: false               # PaperMod: omit this page from client-side search
 
-comments: false
-bluesky_post_uri: ""
+weight: 0                         # Sort on Main Page
+
+comments: true
+bluesky_post_uri: "https://bsky.app/profile/volution.bsky.social/post/3luhdmgo6qc2i"
 bluesky_post_author: "volution.bsky.social"
 
 cover:                            # Page cover image settings
