@@ -24,7 +24,6 @@ cover:                            # Page cover image settings
 
 ---
 
-## Y Sort? 🥁
 Our game looks 3D, but it is actually 2D. All characters and environmental objects are really sprites.
 
 ![alt text](images/01groundcollision_r43.png)
