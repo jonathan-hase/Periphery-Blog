@@ -1,9 +1,9 @@
 ---
 title: "How we handle Z Order in our isometric game."               # The page title, shown in the browser and in listings
-description: ""         # Meta description for SEO and social sharing
+description: "It took us a while to come up with our current solution, and we’d love to hear your thoughts on it."                   # Meta description for SEO and social sharing
 date: 2025-06-25T11:30:03+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
-showtoc: false                     # Show Table of Content (toc) at top of post. Default false
+showtoc: false                    # Show Table of Content (toc) at top of post. Default false
 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: false               # PaperMod: omit this page from client-side search
