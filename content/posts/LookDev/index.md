@@ -1,5 +1,5 @@
 ---
-title: "Visual Worldbuilding"      # The page title, shown in the browser and in listings
+title: "Visual World Building"      # The page title, shown in the browser and in listings
 description: "About the Look Dev of War Video Report."   # Meta description for SEO and social sharing
 
 build: { list: 'never', render: 'always' }
