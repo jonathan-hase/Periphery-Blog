@@ -12,6 +12,8 @@ draft: false                      # Hugo: if true, page is omitted unless built 
 searchHidden: true                # PaperMod: omit this page from client-side search
 hiddenInHomelist: true            # PaperMid: omit this page from main page
 robotsNoIndex: true               # Exclude from SearchEngines
+sitemap:
+  disable: true                   # Exclude from Site Map
 
 weight: 0                         # Sort on Main Page
 
