@@ -1,8 +1,8 @@
 ---
-title: "How our game looks."      # The page title, shown in the browser and in listings
+title: "Visual Worldbuilding"      # The page title, shown in the browser and in listings
 description: "About the Look Dev of War Video Report."   # Meta description for SEO and social sharing
 
-date: 2025-06-25T11:30:03+00:00   # Publication timestamp, used for sorting and display
+date: 2025-10-07T18:00:00+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
 showtoc: false                    # Show Table of Content (toc) at top of post. Default false
 
