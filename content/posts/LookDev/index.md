@@ -2,6 +2,8 @@
 title: "Visual Worldbuilding"      # The page title, shown in the browser and in listings
 description: "About the Look Dev of War Video Report."   # Meta description for SEO and social sharing
 
+build: { list: 'never', render: 'always' }
+
 date: 2025-10-07T18:00:00+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
 showtoc: false                    # Show Table of Content (toc) at top of post. Default false
@@ -9,6 +11,7 @@ showtoc: false                    # Show Table of Content (toc) at top of post. 
 draft: false                      # Hugo: if true, page is omitted unless built with --buildDrafts
 searchHidden: true                # PaperMod: omit this page from client-side search
 hiddenInHomelist: true            # PaperMid: omit this page from main page
+robotsNoIndex: true               # Exclude from SearchEngines
 
 weight: 0                         # Sort on Main Page
 
