@@ -4,7 +4,7 @@ description: "About the Look Dev of War Video Report."   # Meta description 
 
 build: { list: 'never', render: 'always' }
 
-date: 2025-10-07T17:00:00+00:00   # Publication timestamp, used for sorting and display
+date: 2025-10-07T10:00:00+00:00   # Publication timestamp, used for sorting and display
 author: "periphery"               # Author name; can also be a list for multiple authors
 showtoc: false                    # Show Table of Content (toc) at top of post. Default false
 
