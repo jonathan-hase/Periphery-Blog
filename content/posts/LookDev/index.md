@@ -32,4 +32,5 @@ cover:                            # Page cover image settings
 
 ![alt text](images/1025WVR_LookDev_Goals.png){ .full-width }
 ![alt text](images/1025WVR_LookDev_CAR01FR.png){ .full-width }
+Test
 ![alt text](images/1025WVR_LookDev_CAR01BA.png){ .full-width }
