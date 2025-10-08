@@ -26,11 +26,10 @@ cover:                            # Page cover image settings
   alt: ""                         # Alt text for accessibility
   caption: ""                     # Caption displayed under the cover
   relative: true                  # true if image is in a page bundle; false for static files
-  hidden: false                   # true to hide the cover only on this page
+  hidden: true                  # true to hide the cover only on this page
 
 ---
-
-![alt text](images/1025WVR_LookDev_Goals.png){ .full-width }
-![alt text](images/1025WVR_LookDev_CAR01FR.png){ .full-width }
-Test Test
-![alt text](images/1025WVR_LookDev_CAR01BA.png){ .full-width }
+![alt text](images/1025WVR_LookDev_Title.png)
+![alt text](images/1025WVR_LookDev_Goals.png)
+![alt text](images/1025WVR_LookDev_CAR01FR.png)
+![alt text](images/1025WVR_LookDev_CAR01BA.png)
