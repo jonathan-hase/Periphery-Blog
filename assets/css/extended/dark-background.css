@@ -1,0 +1,5 @@
+/* dark-background.css */
+.dark {
+  --theme: #000;
+  --content: rgb(245, 245, 247);
+}

@@ -1,0 +1,41 @@
+{{- /* Footer custom content area start */ -}}
+{{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
+
+<!-- 1. Import Map for React & ReactDOM -->
+<script type="importmap" crossorigin>
+{
+  "imports": {
+    "react":            "https://esm.sh/react@18?dev",
+    "react-dom/client": "https://esm.sh/react-dom@18/client?dev"
+  }
+}
+</script>
+
+<!-- 2. ESM Initialization Script -->
+<script type="module" crossorigin>
+  import React, { useRef, useState, useEffect } 
+    from 'react';
+  import { createRoot } from 'react-dom/client';
+  import {
+    BlueskyComments,
+    BlueskyFilters
+  } from 'https://esm.sh/bluesky-comments@0.12.0?dev';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('bluesky-comments');
+    if (!container) return;
+    const uri    = container.dataset.bskyUri;
+    const author = container.dataset.bskyAuthor;
+
+    const root = createRoot(container);
+    root.render(
+      React.createElement(BlueskyComments, {
+        uri,
+        author,
+        commentFilters: [BlueskyFilters.NoPins],
+      })
+    );
+  });
+</script>
+
+{{- /* Footer custom content area end */ -}}

@@ -1,0 +1,11 @@
+{{- /* Comments area start */ -}}
+
+{{- if .Params.bluesky_post_uri }}
+  <div
+    id="bluesky-comments"
+    data-bsky-uri="{{ .Params.bluesky_post_uri }}"
+    data-bsky-author="{{ .Params.bluesky_post_author }}"
+  ></div>
+{{- end }}
+
+{{- /* Comments area end */ -}}
