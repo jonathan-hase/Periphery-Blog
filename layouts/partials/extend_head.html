@@ -1,0 +1,10 @@
+{{- /* Head custom content area start */ -}}
+<!-- Bluesky Comments stylesheet -->
+<link rel="stylesheet" href="https://unpkg.com/bluesky-comments@latest/dist/bluesky-comments.css">
+
+{{- if .IsPage -}}
+  {{- with .Resources.Get "post.css" -}}
+    <style>{{ .Content | safeCSS }}</style>
+  {{- end -}}
+{{- end -}}
+{{- /* Head custom content area end */ -}}
