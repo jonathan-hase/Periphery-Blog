@@ -2,8 +2,8 @@
     border-radius: unset;
     margin: unset;
     width: 100vw;
-    max-width: 1280px;
-    margin-left: calc(max(-50vw, -640px) + var(--main-width) / 2);
+    max-width: 1920px;
+    margin-left: calc(max(-50vw, -960px) + var(--main-width) / 2);
 }
 
 img {
