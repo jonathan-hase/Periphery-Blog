@@ -4,6 +4,10 @@
 
 <!-- Bluesky Comments stylesheet -->
 <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@latest/dist/bluesky-comments.css">
+
+
+
+
 {{ if .IsPage }}{{ with .Resources.GetMatch "*.css" }}<style>{{ .Content | safeCSS }}</style>{{ end }}{{ end }}
 
 {{- /* Head custom content area end */ -}}
