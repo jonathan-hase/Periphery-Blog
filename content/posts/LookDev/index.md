@@ -29,6 +29,8 @@ cover:                            # Page cover image settings
   hidden: true                  # true to hide the cover only on this page
 
 ---
-![alt text](images/1025WVR_LookDev_Goals.png)
+
+![alt text](images/WVR_GameWindow#4.png)
 ![alt text](images/1025WVR_LookDev_CAR01FR.png)
 ![alt text](images/1025WVR_LookDev_CAR01BA.png)
+![alt text](<images/WVR GameWindow#2.png>)
