@@ -26,11 +26,15 @@ cover:                            # Page cover image settings
   alt: ""                         # Alt text for accessibility
   caption: ""                     # Caption displayed under the cover
   relative: true                  # true if image is in a page bundle; false for static files
-  hidden: true                  # true to hide the cover only on this page
+  hidden: false                  # true to hide the cover only on this page
+  hiddenInSingle: true
 
 ---
 
+![alt text](<images/WVR_GameWindow#4.png>)
+
 ![alt text](images/WVR_GameWindow#4.png)
-![alt text](images/1025WVR_LookDev_CAR01FR.png)
-![alt text](images/1025WVR_LookDev_CAR01BA.png)
+
+![alt text](<images/Zeichenfläche 1 Kopie-2.png>)
+
 ![alt text](<images/WVR GameWindow#2.png>)
