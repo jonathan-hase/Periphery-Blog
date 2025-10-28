@@ -30,11 +30,13 @@ cover:                            # Page cover image settings
   hiddenInSingle: true
 
 ---
-
-![alt text](<images/WVR_GameWindow#4.png>)
-
-![alt text](images/WVR_GameWindow#4.png)
-
-![alt text](<images/Zeichenfläche 1 Kopie-2.png>)
-
-![alt text](<images/WVR GameWindow#2.png>)
+![LookDev_Title](images/1025WVR_LookDev_Title.png)
+![LookDev_Goals](images/1025WVR_LookDev_Goals.png)
+![LookDev_ValueGrouping](images/1025WVR_LookDev_ValueGrouping.png)
+![LookDev_Perspective](images/1025WVR_LookDev_Perspective.png)
+![LookDev_Field](images/1025WVR_LookDev_Field.png)
+![LookDev_Foliage_1](images/1025WVR_LookDev_Foliage_1.png)
+![LookDev_Foliage_2](images/1025WVR_LookDev_Foliage_2.png)
+![LookDev_BEECH_BIG01](images/1025WVR_LookDev_BEECH_BIG01.png)
+![LookDev_CAR01FR](images/1025WVR_LookDev_CAR01FR.png)
+![LookDev_CAR01BA](images/1025WVR_LookDev_CAR01BA.png)
