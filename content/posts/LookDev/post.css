@@ -3,7 +3,7 @@
     margin: unset;
     width: 100vw;
     max-width: 1920px;
-    margin-left: calc(max(-50vw, -960px) + var(--main-width) / 2);
+    margin-left: min(-14px, max(-50vw, -960px) + var(--main-width) / 2);
 }
 
 img {
