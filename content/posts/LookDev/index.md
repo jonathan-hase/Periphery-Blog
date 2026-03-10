@@ -32,7 +32,8 @@ cover:                            # Page cover image settings
 ---
 ![LookDev_Title](images/1025WVR_LookDev_Title.png)
 ![LookDev_Goals](images/1025WVR_LookDev_Goals.png)
-![LookDev_ValueGrouping](images/1025WVR_LookDev_ValueGrouping.png)
+![LookDev_ValueGrouping](images/1025WVR_LookDev_ValueGrouping_1.png)
+![LookDev_ValueGrouping](images/1025WVR_LookDev_ValueGrouping_2.png)
 ![LookDev_Perspective](images/1025WVR_LookDev_Perspective.png)
 ![LookDev_Field](images/1025WVR_LookDev_Field.png)
 ![LookDev_Foliage_1](images/1025WVR_LookDev_Foliage_1.png)
